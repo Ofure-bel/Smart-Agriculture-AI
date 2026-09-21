@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+{% block title %}Disease Detection - Smart Agriculture AI
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/detect.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="page-container">
+    <div class="detect-header">
+        <span class="hero-badge">
+            🔬 AI Disease Detection
+        </span>
+
+        <h1 class="page-title">
+            Tomato Leaf Disease Detection
+        </h1>
+
+        <p class="page-subtitle">
+            Upload a tomato leaf image and let the AI model
+            analyze it for possible diseases.
+        </p>
+    </div>
+
+
+    <div class="detect-card card">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form
+            action="{{ url_for('predict') }}"
+            method="POST"
+            enctype="multipart/form-data"
+            id="predictionForm"
+        >
+            <label
+                for="imageInput"
+                class="upload-area"
+                id="uploadArea"
+            >
+                <div class="upload-icon">
+                    📷
+                </div>
+                <h2>
+                    Upload Tomato Leaf Image
+                </h2>
+
+                <p>
+                    Choose a JPG, JPEG, PNG, or WEBP image
+                </p>
+
+                <span class="browse-button">
+                    Choose Image
+                </span>
+            </label>
+
+
+            <input
+                type="file"
+                id="imageInput"
+                name="image"
+                accept=".jpg,.jpeg,.png,.webp"
+                required
+            >
+
+
+            <div
+                id="previewContainer"
+                class="preview-container"
+            >
+                <img
+                    id="preview"
+                    src=""
+                    alt="Selected tomato leaf image"
+                >
+                <p
+                    class="file-name"
+                    id="fileName"
+                ></p>
+            </div>
+
+
+            <button
+                type="submit"
+                class="btn btn-primary analyze-button"
+                id="analyzeButton"
+                disabled
+            >
+                Analyze Image
+            </button>
+
+
+            <div class="info">
+                <strong>Supported formats:</strong>
+                JPG, JPEG, PNG, WEBP
+                <br>
+
+                <strong>Maximum file size:</strong>
+                10 MB
+
+                <br><br>
+
+                <strong>Important:</strong>
+                This system provides an AI-assisted prediction
+                and should not be treated as a definitive
+                agricultural diagnosis.
+            </div>
+        </form>
+    </div>
+
+
+    <div class="detect-info">
+        <div class="info-item">
+            <span>📸</span>
+            <div>
+                <strong>Use a clear image</strong>
+                <p>
+                    Make sure the leaf is visible and well lit.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="info-item">
+            <span>🍃</span>
+            <div>
+                <strong>Focus on the leaf</strong>
+                <p>
+                    Avoid excessive background clutter.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="info-item">
+            <span>🤖</span>
+            <div>
+                <strong>AI prediction</strong>
+                <p>
+                    The model returns the predicted class
+                    and confidence score.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/detect.js') }}"></script>
+{% endblock %}

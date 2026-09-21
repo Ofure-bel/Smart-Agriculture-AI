@@ -1,0 +1,23 @@
+Stage 2 EfficientNetB0 Classification Report
+=======================================================
+
+Test Loss: 0.2210
+Test Accuracy: 0.9292
+Test Accuracy: 92.92%
+
+                                               precision    recall  f1-score   support
+
+                      Tomato___Bacterial_spot     0.9412    0.9028    0.9216       319
+                        Tomato___Early_blight     0.9453    0.8067    0.8705       150
+                         Tomato___Late_blight     0.9614    0.9547    0.9580       287
+                           Tomato___Leaf_Mold     0.9441    0.9441    0.9441       143
+                  Tomato___Septoria_leaf_spot     0.9401    0.9436    0.9418       266
+Tomato___Spider_mites Two-spotted_spider_mite     0.8992    0.8849    0.8920       252
+                         Tomato___Target_Spot     0.7395    0.9190    0.8195       210
+       Tomato___Tomato_Yellow_Leaf_Curl_Virus     0.9987    0.9415    0.9693       804
+                 Tomato___Tomato_mosaic_virus     1.0000    0.9464    0.9725        56
+                             Tomato___healthy     0.8587    0.9958    0.9222       238
+
+                                     accuracy                         0.9292      2725
+                                    macro avg     0.9228    0.9240    0.9211      2725
+                                 weighted avg     0.9351    0.9292    0.9303      2725

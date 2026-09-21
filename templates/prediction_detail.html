@@ -1,0 +1,205 @@
+{% extends "base.html" %}
+{% block title %}Prediction Details - Smart Agriculture AI
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/prediction_detail.css') }}">
+{% endblock %}
+
+
+{% block content %}
+<div class="page-container">
+    <div class="detail-header">
+        <span class="hero-badge">
+            🔎 Prediction Details
+        </span>
+
+        <h1 class="page-title">
+            {{ prediction.display_class or prediction.predicted_class }}
+        </h1>
+
+        <p class="page-subtitle">
+            Detailed analysis of your tomato leaf prediction.
+        </p>
+    </div>
+
+    <div class="detail-grid">
+        <!-- Image -->
+        <section class="detail-card card">
+            <div class="section-heading">
+                <span>📷</span>
+                <h2>Analyzed Image</h2>
+            </div>
+
+            {% if prediction.image_filename %}
+                <div class="detail-image-wrapper">
+                    <img
+                        src="{{ url_for('static', filename='uploads/' + prediction.image_filename) }}"
+                        alt="Analyzed tomato leaf"
+                        class="detail-image"
+                    >
+                </div>
+            
+            {% else %}
+                <div class="image-placeholder">
+                    🍃
+                    <p>Image unavailable</p>
+                </div>
+            {% endif %}
+
+            {% if prediction.original_filename %}
+                <p class="filename">
+                    📄 {{ prediction.original_filename }}
+                </p>
+            {% endif %}
+        </section>
+
+
+        <!-- Prediction -->
+        <section class="detail-card card">
+            <div class="section-heading">
+                <span>🤖</span>
+                <h2>AI Prediction</h2>
+            </div>
+
+            <div class="prediction-name">
+                {{ prediction.display_class or prediction.predicted_class }}
+            </div>
+
+            <div class="confidence-section">
+                <div class="confidence-header">
+                    <span>Confidence</span>
+                    <strong>
+                        {{ "%.2f"|format(prediction.confidence * 100) }}%
+                    </strong>
+                </div>
+
+                <div class="progress-track">
+                    <div
+                        class="progress-bar"
+                        data-width="{{ prediction.confidence * 100 }}"
+                    ></div>
+                </div>
+            </div>
+
+            {% if prediction.created_at %}
+                <div class="prediction-date">
+                    🕒 {{ prediction.created_at }}
+                </div>
+            {% endif %}
+        </section>
+    </div>
+
+
+    {% if prediction.disease_info %}
+        <section class="detail-card card disease-information">
+            <div class="section-heading">
+                <span>🌿</span>
+                <h2>Disease Information</h2>
+            </div>
+
+            {% if prediction.disease_info.category %}
+                <div class="category-badge">
+                    {{ prediction.disease_info.category }}
+                </div>
+            {% endif %}
+
+            {% if prediction.disease_info.description %}
+                <div class="info-section">
+                    <h3>About</h3>
+                    <p>
+                        {{ prediction.disease_info.description }}
+                    </p>
+                </div>
+            {% endif %}
+
+            {% if prediction.disease_info.symptoms %}
+                <div class="info-section">
+                    <h3>Symptoms</h3>
+                    <ul>
+                        {% for symptom in prediction.disease_info.symptoms %}
+                            <li>{{ symptom }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+
+            {% if prediction.disease_info.recommendation %}
+                <div class="recommendation-box">
+                    <h3>💡 Recommendation</h3>
+                    <p>
+                        {{ prediction.disease_info.recommendation }}
+                    </p>
+                </div>
+            {% endif %}
+        </section>
+    {% endif %}
+
+
+    {% if prediction.top_predictions %}
+        <section class="detail-card card top-predictions">
+            <div class="section-heading">
+                <span>📊</span>
+                <h2>Alternative Predictions</h2>
+            </div>
+
+            <div class="prediction-list">
+                {% for item in prediction.top_predictions %}
+                    <div class="prediction-item">
+                        <div class="prediction-item-header">
+                            <span>
+                                {{ item.display_class or item.class_name }}
+                            </span>
+
+                            <strong>
+                                {{ "%.2f"|format(item.confidence * 100) }}%
+                            </strong>
+                        </div>
+
+                        <div class="small-progress-track">
+                            <div
+                                class="small-progress-bar"
+                                data-width="{{ item.confidence * 100 }}"
+                            ></div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+    {% endif %}
+
+
+    <div class="detail-actions">
+        <a
+            href="{{ url_for('detect') }}"
+            class="btn btn-primary"
+        >
+            🔬 Analyze Another Image
+        </a>
+
+        <a
+            href="{{ url_for('history') }}"
+            class="btn btn-secondary"
+        >
+            📋 View History
+        </a>
+
+    </div>
+
+
+    <div class="detail-disclaimer">
+        <strong>⚠️ Important:</strong>
+        This result is an AI-assisted prediction and should
+        not be considered a definitive agricultural diagnosis.
+        For serious or uncertain cases, consult a qualified
+        agricultural professional.
+    </div>
+</div>
+
+{% endblock %}
+
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/prediction_detail.js') }}"></script>
+{% endblock %}

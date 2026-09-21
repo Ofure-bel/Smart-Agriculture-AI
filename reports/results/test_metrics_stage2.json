@@ -1,0 +1,8 @@
+{
+    "model": "EfficientNetB0",
+    "stage": "Stage 2 - Fine Tuning",
+    "test_samples": 2725,
+    "test_loss": 0.22095496952533722,
+    "test_accuracy": 0.9291743040084839,
+    "test_accuracy_percent": 92.91743040084839
+}

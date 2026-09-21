@@ -1,0 +1,209 @@
+.hero-section {
+    min-height: 520px;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-badge {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 7px 13px;
+    background: #dcfce7;
+    color: #166534;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.hero-content h1 {
+    max-width: 700px;
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.08;
+    color: #111827;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+    display: block;
+    color: #16a34a;
+}
+
+.hero-content p {
+    max-width: 650px;
+    color: #6b7280;
+    font-size: 18px;
+    margin-bottom: 28px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+
+.hero-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.leaf-card {
+    width: 320px;
+    height: 320px;
+    border-radius: 30px;
+    background: linear-gradient(145deg, #dcfce7, #f0fdf4);
+    border: 1px solid #bbf7d0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(22, 101, 52, 0.12);
+}
+
+.leaf-icon {
+    font-size: 105px;
+    z-index: 2;
+}
+
+.leaf-card span {
+    margin-top: 20px;
+    color: #166534;
+    font-weight: 700;
+}
+
+.scan-line {
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    top: 80px;
+    height: 2px;
+    background: #22c55e;
+    opacity: 0.7;
+    animation: scan 2.5s ease-in-out infinite;
+}
+
+@keyframes scan {
+    0%, 100% {
+        top: 70px;
+    }
+    50% {
+        top: 245px;
+    }
+}
+
+
+.features-section {
+    padding: 60px 0;
+}
+
+.section-heading {
+    margin-bottom: 28px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.feature-card {
+    position: relative;
+}
+
+.feature-number {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #dcfce7;
+    color: #166534;
+    font-weight: 700;
+    margin-bottom: 17px;
+}
+
+.feature-card h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #111827;
+}
+
+.feature-card p {
+    color: #6b7280;
+}
+
+
+.cta-section {
+    margin-top: 30px;
+    padding: 32px;
+    border-radius: 15px;
+    background: #166534;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.cta-section h2 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.cta-section p {
+    color: #dcfce7;
+}
+
+.cta-section .btn-primary {
+    background: #ffffff;
+    color: #166534;
+}
+
+.cta-section .btn-primary:hover {
+    background: #f0fdf4;
+}
+
+
+@media (max-width: 850px) {
+    .hero-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 35px;
+    }
+
+    .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-visual {
+        order: -1;
+    }
+
+    .leaf-card {
+        width: 240px;
+        height: 240px;
+    }
+
+    .leaf-icon {
+        font-size: 75px;
+    }
+
+    .cta-section {
+        flex-direction: column;
+        text-align: center;
+    }
+}

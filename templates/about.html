@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% block title %}About - Smart Agriculture AI
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/about.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="page-container">
+    <section class="about-hero">
+        <div>
+            <span class="about-badge">🌱 AI Agriculture Project</span>
+            <h1 class="page-title">
+                About Smart Agriculture AI
+            </h1>
+            <p class="page-subtitle">
+                An artificial intelligence system designed to help identify
+                tomato leaf diseases from images using deep learning.
+            </p>
+        </div>
+    </section>
+
+
+    <section class="about-grid">
+        <div class="card">
+            <div class="about-icon">🤖</div>
+            <h2>AI-Powered Detection</h2>
+            <p>
+                The system uses a trained deep learning image classification
+                model to analyze tomato leaf images and predict the most
+                likely disease category.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="about-icon">🍅</div>
+            <h2>Tomato Disease Classification</h2>
+            <p>
+                The model has been trained to distinguish between multiple
+                tomato leaf health and disease categories.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="about-icon">📊</div>
+            <h2>Prediction History</h2>
+            <p>
+                Predictions can be stored in the application's database so
+                previous analyses can be reviewed later.
+            </p>
+        </div>
+    </section>
+
+
+    <section class="stats-section">
+        <h2 class="section-title">
+            Model Information
+        </h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-value">
+                    {{ model_accuracy|float|round(2) }}%
+                </span>
+                <span class="stat-label">
+                    Test Accuracy
+                </span>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-value">
+                    {{ num_classes }}
+                </span>
+                <span class="stat-label">
+                    Disease Classes
+                </span>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-value">
+                    CNN
+                </span>
+                <span class="stat-label">
+                    Deep Learning
+                </span>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-value">
+                    Flask
+                </span>
+                <span class="stat-label">
+                    Web Framework
+                </span>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="technology-section">
+        <h2 class="section-title">
+            Technology Stack
+        </h2>
+        <div class="technology-list">
+            <div class="technology-item">
+                <strong>Model</strong>
+                <span>{{ model_name }}</span>
+            </div>
+
+            <div class="technology-item">
+                <strong>Backend</strong>
+                <span>Python + Flask</span>
+            </div>
+
+            <div class="technology-item">
+                <strong>Machine Learning</strong>
+                <span>TensorFlow / Keras</span>
+            </div>
+
+            <div class="technology-item">
+                <strong>Database</strong>
+                <span>SQLite</span>
+            </div>
+
+            <div class="technology-item">
+                <strong>Frontend</strong>
+                <span>HTML + CSS + JavaScript</span>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="disclaimer card">
+        <h2>⚠️ Important Note</h2>
+        <p>
+            This application is intended for educational, research, and
+            demonstration purposes. AI predictions should not be considered
+            a definitive agricultural diagnosis. For important crop-health
+            decisions, consult a qualified agricultural professional.
+        </p>
+    </section>
+</div>
+{% endblock %}

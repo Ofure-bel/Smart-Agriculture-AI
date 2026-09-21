@@ -1,0 +1,138 @@
+.about-hero {
+    margin-bottom: 40px;
+}
+
+.about-badge {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 6px 12px;
+    background: #dcfce7;
+    color: #166534;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.about-grid h2 {
+    margin: 12px 0 8px;
+    font-size: 20px;
+    color: #111827;
+}
+
+.about-grid p {
+    color: #6b7280;
+}
+
+.about-icon {
+    font-size: 34px;
+}
+
+
+.stats-section {
+    margin-bottom: 50px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.stat-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    color: #166534;
+}
+
+.stat-label {
+    display: block;
+    margin-top: 5px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+.technology-section {
+    margin-bottom: 40px;
+}
+
+.technology-list {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.technology-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 17px 20px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.technology-item:last-child {
+    border-bottom: none;
+}
+
+.technology-item strong {
+    color: #374151;
+}
+
+.technology-item span {
+    color: #6b7280;
+}
+
+
+.disclaimer {
+    margin-top: 20px;
+    background: #fffbeb;
+    border-color: #fde68a;
+}
+
+.disclaimer h2 {
+    color: #92400e;
+    margin-bottom: 8px;
+}
+
+.disclaimer p {
+    color: #78350f;
+}
+
+
+@media (max-width: 850px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 500px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    .technology-item {
+        flex-direction: column;
+        gap: 3px;
+    }
+}

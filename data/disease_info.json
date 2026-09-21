@@ -1,0 +1,130 @@
+{
+    "Tomato___Bacterial_spot": {
+        "name": "Bacterial Spot",
+        "category": "Bacterial Disease",
+        "description": "Bacterial spot is a bacterial disease that causes small, dark lesions on tomato leaves and can also affect fruit.",
+        "symptoms": [
+            "Small dark spots on leaves",
+            "Yellowing around affected areas",
+            "Leaf damage that may expand over time",
+            "Dark lesions may also appear on fruit"
+        ],
+        "recommendation": "Inspect affected plants carefully, remove severely affected material where appropriate, and maintain good field sanitation. Avoid working with wet foliage because moisture can encourage bacterial spread."
+    },
+
+    "Tomato___Early_blight": {
+        "name": "Early Blight",
+        "category": "Fungal Disease",
+        "description": "Early blight is a fungal disease that commonly produces dark lesions with characteristic concentric ring patterns on older tomato leaves.",
+        "symptoms": [
+            "Dark circular lesions",
+            "Concentric ring patterns",
+            "Yellowing around lesions",
+            "Lower leaves are often affected first"
+        ],
+        "recommendation": "Remove severely affected leaves, improve air circulation, avoid prolonged leaf wetness, and maintain good sanitation around tomato plants."
+    },
+
+    "Tomato___Late_blight": {
+        "name": "Late Blight",
+        "category": "Fungal Disease",
+        "description": "Late blight is a destructive disease that can rapidly damage tomato foliage and fruit under favorable environmental conditions.",
+        "symptoms": [
+            "Large irregular dark lesions",
+            "Rapid leaf deterioration",
+            "Brown or dark areas on stems",
+            "Dark lesions may develop on fruit"
+        ],
+        "recommendation": "Monitor plants closely, remove severely infected material, improve air circulation, and seek locally appropriate disease-management guidance when symptoms are confirmed."
+    },
+
+    "Tomato___Leaf_Mold": {
+        "name": "Leaf Mold",
+        "category": "Fungal Disease",
+        "description": "Tomato leaf mold is a fungal disease that primarily affects foliage, especially under humid conditions.",
+        "symptoms": [
+            "Yellow patches on upper leaf surfaces",
+            "Olive or grayish growth on leaf undersides",
+            "Leaf discoloration",
+            "Premature leaf decline"
+        ],
+        "recommendation": "Improve ventilation, reduce prolonged humidity around foliage, avoid unnecessary leaf wetness, and remove heavily affected plant material."
+    },
+
+    "Tomato___Septoria_leaf_spot": {
+        "name": "Septoria Leaf Spot",
+        "category": "Fungal Disease",
+        "description": "Septoria leaf spot produces numerous small circular lesions and commonly begins on lower tomato leaves.",
+        "symptoms": [
+            "Small circular leaf spots",
+            "Dark borders around lesions",
+            "Light-colored centers",
+            "Progressive lower-leaf damage"
+        ],
+        "recommendation": "Remove severely affected leaves, maintain sanitation, improve air circulation, and avoid overhead watering where possible."
+    },
+
+    "Tomato___Spider_mites Two-spotted_spider_mite": {
+        "name": "Two-Spotted Spider Mite",
+        "category": "Pest",
+        "description": "Two-spotted spider mites are tiny pests that feed on plant tissues and can cause stippling, discoloration, and leaf decline.",
+        "symptoms": [
+            "Fine speckling on leaves",
+            "Yellow or bronze discoloration",
+            "Leaf drying",
+            "Fine webbing may be visible in severe infestations"
+        ],
+        "recommendation": "Inspect leaf undersides for mites and webbing. Monitor populations regularly and use locally appropriate integrated pest-management practices."
+    },
+
+    "Tomato___Target_Spot": {
+        "name": "Target Spot",
+        "category": "Fungal Disease",
+        "description": "Target spot is a fungal disease that can produce circular lesions with patterns resembling concentric targets.",
+        "symptoms": [
+            "Circular brown lesions",
+            "Target-like concentric patterns",
+            "Leaf yellowing",
+            "Progressive foliage damage"
+        ],
+        "recommendation": "Remove severely affected plant material, improve air circulation, reduce prolonged leaf wetness, and maintain good crop sanitation."
+    },
+
+    "Tomato___Tomato_Yellow_Leaf_Curl_Virus": {
+        "name": "Tomato Yellow Leaf Curl Virus",
+        "category": "Viral Disease",
+        "description": "Tomato yellow leaf curl virus can cause severe leaf curling, yellowing, and reduced plant growth.",
+        "symptoms": [
+            "Upward leaf curling",
+            "Yellowing of leaves",
+            "Reduced plant growth",
+            "Smaller or distorted new leaves"
+        ],
+        "recommendation": "Inspect plants for symptoms and potential whitefly vectors. Remove severely affected plants where appropriate and use integrated pest-management practices."
+    },
+
+    "Tomato___Tomato_mosaic_virus": {
+        "name": "Tomato Mosaic Virus",
+        "category": "Viral Disease",
+        "description": "Tomato mosaic virus can cause mottled leaf coloration, distorted growth, and reduced plant performance.",
+        "symptoms": [
+            "Mosaic patterns on leaves",
+            "Light and dark green mottling",
+            "Leaf distortion",
+            "Reduced plant growth"
+        ],
+        "recommendation": "Maintain strict sanitation, avoid spreading plant sap between plants, remove infected material where appropriate, and use clean tools and planting material."
+    },
+
+    "Tomato___healthy": {
+        "name": "Healthy",
+        "category": "Healthy Plant",
+        "description": "The AI model did not detect one of the tomato diseases represented in its training classes.",
+        "symptoms": [
+            "No major disease pattern detected",
+            "Normal-looking foliage",
+            "No obvious disease lesions in the analyzed image"
+        ],
+        "recommendation": "Continue regular plant monitoring and maintain good agricultural and crop-management practices."
+    }
+}

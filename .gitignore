@@ -216,3 +216,27 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Smart Agriculture AI project files
+# Local database
+database/*.db
+database/*.sqlite
+database/*.sqlite3
+
+# User-uploaded images
+static/uploads/*
+!static/uploads/.gitkeep
+
+# Generated Grad-CAM images
+static/gradcam/*
+!static/gradcam/.gitkeep
+
+# Training dataset
+dataset/
+
+
+# Training and intermediate model artifacts
+models/checkpoints/
+models/saved_models/efficientnetb0_base.keras
+models/saved_models/tomato_disease_stage1.keras
+

@@ -1,0 +1,277 @@
+.detail-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.detail-card {
+    padding: 26px;
+}
+
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+.section-heading span {
+    font-size: 24px;
+}
+
+.section-heading h2 {
+    margin: 0;
+    font-size: 21px;
+}
+
+
+.detail-image-wrapper {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #f3f4f6;
+}
+
+.detail-image {
+    width: 100%;
+    height: 360px;
+    display: block;
+    object-fit: cover;
+}
+
+.image-placeholder {
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: #f3f4f6;
+    color: #6b7280;
+    font-size: 50px;
+}
+
+.image-placeholder p {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+
+.filename {
+    margin: 14px 0 0;
+    color: #6b7280;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.prediction-name {
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+
+.confidence-section {
+    margin-top: 10px;
+}
+
+.confidence-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 9px;
+    font-size: 15px;
+}
+
+.confidence-header strong {
+    font-size: 16px;
+}
+
+
+.progress-track {
+    width: 100%;
+    height: 12px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: #e5e7eb;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    border-radius: inherit;
+    background: #10b981;
+    transition: width 0.8s ease;
+}
+
+.prediction-date {
+    margin-top: 28px;
+    padding-top: 18px;
+    border-top: 1px solid #e5e7eb;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+.disease-information {
+    margin-bottom: 24px;
+}
+
+.category-badge {
+    display: inline-block;
+    margin-bottom: 22px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: #ecfdf5;
+    color: #047857;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.info-section {
+    margin-top: 24px;
+}
+
+.info-section h3,
+.recommendation-box h3 {
+    margin: 0 0 10px;
+    font-size: 17px;
+}
+
+.info-section p {
+    margin: 0;
+    color: #4b5563;
+    line-height: 1.7;
+}
+
+.info-section ul {
+    margin: 0;
+    padding-left: 22px;
+    color: #4b5563;
+    line-height: 1.8;
+}
+
+.recommendation-box {
+    margin-top: 26px;
+    padding: 18px 20px;
+    border-radius: 12px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+}
+
+.recommendation-box p {
+    margin: 0;
+    color: #374151;
+    line-height: 1.7;
+}
+
+
+.top-predictions {
+    margin-bottom: 24px;
+}
+
+.prediction-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.prediction-item-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.prediction-item-header strong {
+    flex-shrink: 0;
+}
+
+.small-progress-track {
+    width: 100%;
+    height: 8px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: #e5e7eb;
+}
+
+.small-progress-bar {
+    width: 0;
+    height: 100%;
+    border-radius: inherit;
+    background: #6b7280;
+    transition: width 0.7s ease;
+}
+
+
+.detail-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: 30px 0;
+}
+
+.detail-disclaimer {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 18px 20px;
+    border-radius: 12px;
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    color: #78350f;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+@media (max-width: 850px) {
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-image {
+        height: 320px;
+    }
+
+    .image-placeholder {
+        height: 320px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .detail-card {
+        padding: 20px;
+    }
+
+    .prediction-name {
+        font-size: 24px;
+    }
+
+    .detail-image {
+        height: 260px;
+    }
+
+    .image-placeholder {
+        height: 260px;
+    }
+
+    .detail-actions {
+        flex-direction: column;
+    }
+
+    .detail-actions .btn {
+        width: 100%;
+    }
+}

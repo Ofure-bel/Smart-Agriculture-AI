@@ -1,0 +1,22 @@
+{
+    "Stage 1": {
+        "test_accuracy": 0.887,
+        "test_accuracy_percent": 88.7,
+        "test_loss": 0.3709,
+        "macro_f1": 0.869,
+        "weighted_f1": 0.8884
+    },
+    "Stage 2": {
+        "test_accuracy": 0.9292,
+        "test_accuracy_percent": 92.92,
+        "test_loss": 0.221,
+        "macro_f1": 0.9211,
+        "weighted_f1": 0.9303
+    },
+    "improvement": {
+        "accuracy_percentage_points": 4.22,
+        "macro_f1_improvement": 0.0521,
+        "weighted_f1_improvement": 0.0419,
+        "test_loss_reduction": 0.1499
+    }
+}

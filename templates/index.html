@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% block title %}Home - Smart Agriculture AI
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
+
+
+{% block content %}
+<div class="page-container">
+    <section class="hero-section">
+        <div class="hero-content">
+            <span class="hero-badge">
+                🌱 AI-Powered Agriculture
+            </span>
+
+            <h1>
+                Detect Tomato Leaf Diseases
+                <span>with Artificial Intelligence</span>
+            </h1>
+
+            <p>
+                Upload a photo of a tomato leaf and let our deep learning
+                model analyze it to identify potential diseases or confirm
+                that the leaf appears healthy.
+            </p>
+
+            <div class="hero-actions">
+                <a href="{{ url_for('detect') }}"
+                   class="btn btn-primary">
+                    🔍 Analyze a Leaf
+                </a>
+
+                <a href="{{ url_for('about') }}"
+                   class="btn btn-secondary">
+                    Learn More
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="leaf-card">
+                <div class="leaf-icon">🍅</div>
+                <div class="scan-line"></div>
+                <span>AI Leaf Analysis</span>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="features-section">
+        <div class="section-heading">
+            <h2 class="section-title">
+                How It Works
+            </h2>
+
+            <p class="section-subtitle">
+                Get an AI-powered prediction in just a few simple steps.
+            </p>
+        </div>
+
+        <div class="feature-grid">
+            <div class="card feature-card">
+                <div class="feature-number">1</div>
+                <h3>Upload</h3>
+                <p>
+                    Select a clear image of a tomato leaf from your device.
+                </p>
+            </div>
+
+            <div class="card feature-card">
+                <div class="feature-number">2</div>
+                <h3>Analyze</h3>
+                <p>
+                    Our trained deep learning model processes the image.
+                </p>
+            </div>
+
+            <div class="card feature-card">
+                <div class="feature-number">3</div>
+                <h3>Get Results</h3>
+                <p>
+                    View the predicted disease, confidence score, and
+                    additional information.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="cta-section">
+        <div>
+            <h2>Ready to analyze a tomato leaf?</h2>
+            <p>
+                Start your first AI-powered analysis now.
+            </p>
+        </div>
+
+        <a href="{{ url_for('detect') }}"
+           class="btn btn-primary">
+            Start Detection →
+        </a>
+    </section>
+</div>
+
+{% endblock %}
